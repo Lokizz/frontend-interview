@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="css/style.css">
+  <title>大屏适配数据可视化项目</title>
+</head>
+<body>
+  <div id="app">
+    <header>
+      <h1>数据可视化 - ECharts</h1>
+      <div class="show-time">
+      </div>
+    </header>
+
+    <!-- 页面主体 -->
+    <section class="mainbox">
+      <!-- 左侧模块 -->
+      <div class="column">
+        <div class="panel bar">
+          <h2>柱形图 - 就业行业</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line">
+          <h2>
+            折线图 - 人员变化
+            <a href="">2020</a>
+            <a href="">2021</a>
+          </h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie">
+          <h2>饼图 - 年龄分布</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+      <!-- 中间模块 -->
+      <div class="column">
+        <!-- 数字模块 -->
+        <div class="no">
+          <div class="no-hd">
+            <ul>
+              <li>125811</li>
+              <li>104563</li>
+            </ul>
+          </div>
+          <div class="no-bd">
+            <ul>
+              <li>前端需求人数</li>
+              <li>市场供应人数</li>
+            </ul>
+          </div>
+        </div>
+        <!-- 地图模块 -->
+        <div class="map">
+          <div class="map1"></div>
+          <div class="map2"></div>
+          <div class="map3"></div>
+          <div class="chart"></div>
+        </div>
+      </div>
+      <!-- 右侧模块 -->
+      <div class="column">
+        <div class="panel bar2">
+          <h2>柱形图 - 就业行业</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel line2">
+          <h2>折线图 - 就业行业</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+        <div class="panel pie2">
+          <h2>饼图 - 就业行业</h2>
+          <div class="chart"></div>
+          <div class="panel-footer"></div>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+  <script src="js/flexible.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/echarts@5.3.1/dist/echarts.min.js"></script>
+  <script src="js/china.js"></script>
+  <script src="https://unpkg.com/vue@next"></script>
+  <script src="js/es6.js"></script>
+</body>
+</html>

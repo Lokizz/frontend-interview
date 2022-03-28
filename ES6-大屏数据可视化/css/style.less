@@ -1,0 +1,303 @@
+// * css 初始化
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+::before,
+::after {
+  box-sizing: border-box;
+}
+
+li {
+  list-style: none;
+}
+
+// * 声明字体
+@font-face {
+  font-family: electronicFont;
+  src: url(../font/DS-DIGIT.TTF);
+}
+
+body {
+  background: url(../images/bg.jpg) no-repeat top center;
+  background-size: cover;
+}
+
+header {
+  position: relative;
+  height: 1.25rem;
+  background: url(../images/head_bg.png) no-repeat;
+  background-size: cover;
+  h1 {
+    font-size: .475rem;
+    color: #fff;
+    text-align: center;
+    line-height: 1rem;
+  }
+  .show-time {
+    position: absolute;
+    top: 0;
+    right: .375rem;
+    line-height: .9375rem;
+    color: rgba(255, 255, 255, .7);
+    font-size: .25rem;
+  }
+}
+
+.mainbox {
+  min-width: 1024px;
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: .125rem .125rem 0;
+  display: flex;
+  align-items: center;
+
+  .column {
+    flex: 3;
+  }
+  .column:nth-child(2) {
+    flex: 5;
+    margin: 0 .125rem .1875rem;
+    // ! 保证内容渲染不会溢出
+    overflow: hidden;
+  }
+
+  .panel {
+    position: relative;
+    height: 3.875rem;
+    padding: 0 .1875rem .5rem;
+    margin-bottom: .1875rem;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+    background: url(../images/line\(1\).png) rgba(255,255,255,0.03);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 10px;
+      height: 10px;
+      border-left: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5; 
+      content: "";
+    }
+    &::after {
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 10px;
+      height: 10px;
+      border-right: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5; 
+      content: "";
+    }
+
+    .panel-footer {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+
+      &::before {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 10px;
+        height: 10px;
+        border-left: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+        content: "";
+      } 
+      &::after {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: 10px;
+        height: 10px;
+        border-right: 2px solid #02a6b5;
+        border-bottom: 2px solid #02a6b5;
+        content: "";
+      }
+    }
+
+    h2 {
+      height: .6rem;
+      color: #fff;
+      line-height: .6rem;
+      text-align: center;
+      font-size: .25rem;
+      font-weight: 400;
+      
+      a {
+        color: #fff;
+        text-decoration: none;
+        margin: 0 .125rem;
+      }
+    }
+
+    .chart {
+      height: 3rem;
+    }
+  }
+}
+
+// * no 数字模块
+.no {
+  background-color: rgba(101, 132, 226, 0.1);
+  padding: .1875rem;
+
+  .no-hd {
+    position: relative;
+    border: 1px solid rgba(25, 186, 139, 0.17);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 30px;
+      height: 10px;
+      border-left: 2px solid #02a6b5;
+      border-top: 2px solid #02a6b5;
+      content: "";
+    }
+
+    &::after {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 30px;
+      height: 10px;
+      border-right: 2px solid #02a6b5;
+      border-bottom: 2px solid #02a6b5;
+      content: "";
+    }
+
+    ul {
+      display: flex;
+      justify-content: space-evenly;
+
+      li {
+        position: relative;
+        line-height: 1rem;
+        font-size: .875rem;
+        color: #ffeb7b;
+        text-align: center;
+        font-family: 'electronicFont';
+        flex: 1;
+
+        &:first-child::after {
+          position: absolute;
+          top: 25%;
+          right: 0;
+          width: 1px;
+          height: 50%;
+          background-color: rgba(255, 255, 255, 0.2);
+          content: "";
+        }
+      }
+    }
+  }
+
+  .no-bd {
+    ul {
+      display: flex;
+
+      li {
+        height: .5rem;
+        line-height: .5rem;
+        font-size: .225rem;
+        padding-top: .125rem;
+        text-align: center;
+        flex: 1;
+        color: #fff;
+      }
+    }
+  }
+}
+
+// * 地图模块
+.map {
+  height: 10.125rem;
+  position: relative;
+
+  .map1 {
+    width: 6.475rem;
+    height: 6.475rem;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: url(../images/map.png) no-repeat center;
+    background-size: contain;
+    opacity: .3;
+  }
+
+  .map2 {
+    position: absolute;
+    width: 8.0375rem;
+    height: 8.0375rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .3;
+    background: url(../images/lbx.png);
+    background-size: cover;
+    z-index: -1;
+    animation: rotate1 15s linear infinite;
+  }
+
+  .map3 {
+    position: absolute;
+    width: 7.075rem;
+    height: 7.075rem;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: .3;
+    background: url(../images/jt.png);
+    background-size: cover;
+    animation: rotate2 10s linear infinite;
+  }
+
+  .chart {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 10.125rem;
+    
+  }
+
+  @keyframes rotate1 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(360deg);
+    }
+  }
+
+  @keyframes rotate2 {
+    from {
+      transform: translate(-50%, -50%) rotate(0deg);
+    }
+    to {
+      transform: translate(-50%, -50%) rotate(-360deg);
+    }
+  }
+}
+
+
+// 约束屏幕尺寸
+@media screen and (max-width: 1024px) {
+  html {
+    font-size: 42px !important;
+  }
+}
+
+@media screen and (min-width: 1920px) {
+  html {
+    font-size: 80px !important;
+  }
+}
