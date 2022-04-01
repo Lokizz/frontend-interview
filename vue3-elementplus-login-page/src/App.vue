@@ -9,7 +9,13 @@ html,
 body,
 #app {
   width: 100%;
-  height: 100%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#app {
+  display: flex;
+  align-items: center;
 }
 
 *,
