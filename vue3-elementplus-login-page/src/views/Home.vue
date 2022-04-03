@@ -4,6 +4,9 @@
       <el-row justify="center" align="middle">
         <el-col :span="16">
           <div class="container">
+            <div class="banner" style="padding: 1rem;">
+              normal banner
+            </div>
             <div class="banner">
             <img src="@/assets/img/demonstrate.svg" alt="展示Demo">
             <h2>登陆组件展示 Demo</h2>
@@ -52,6 +55,10 @@ const handleClick = ():void => {
   margin-bottom: 2rem;
   height: 100%;
   text-align: center;
+}
+
+.container >>> .banner {
+  border: 1px solid red;
 }
 .banner {
   display: flex;
