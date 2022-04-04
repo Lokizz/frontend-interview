@@ -38,7 +38,7 @@
   },
   "config": {
     "commitizen": {
-      "path": "node_modules/cz-customizable"
+      "path": "/Users/surloki/Documents/git-repos/frontend-interview/vue3-admin-system/node_modules/cz-customizable"
     }
   }
 }
