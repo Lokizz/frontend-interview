@@ -1,0 +1,2 @@
+"use strict";(self["webpackChunkapp"]=self["webpackChunkapp"]||[]).push([[478],{2478:(t,n,e)=>{e.r(n),e.d(n,{default:()=>r});var c=e(3396),u=e(7139),s=e(4870),a={class:"test"};const i={setup:function(t){var n=(0,s.iH)("content here");function e(){n.value="content modified"}return function(t,i){return(0,c.wg)(),(0,c.iD)("div",a,[(0,c.Uk)((0,u.zw)((0,s.SU)(n))+" ",1),(0,c._)("button",{class:"btn",onClick:e},"修改 content 内容")])}}},o=i,r=o}}]);
+//# sourceMappingURL=478.5aca42b2.js.map
