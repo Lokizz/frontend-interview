@@ -1,17 +1,14 @@
 <template>
-  <div class="container" :class="{'sign-up-mode': signUpMode}">
+  <div class="container" :class="{ 'sign-up-mode': signUpMode }">
     <div class="forms-container">
       <div class="signin-signup">
         <!-- 登陆 -->
-        <LoginForm 
-          :loginUser="loginUser"
-          :rules="rules"
-         />
+        <LoginForm :loginUser="loginUser" :rules="rules" />
         <!-- 注册 -->
-        <RegisterForm 
+        <RegisterForm
           :registerUser="registerUser"
           :registerRules="registerRules"
-          />
+        />
       </div>
     </div>
     <!-- 左右切换动画 -->
@@ -20,35 +17,38 @@
         <div class="content">
           <h3></h3>
           <p></p>
-          <button @click="signUpMode = !signUpMode" class="btn transparent">立即注册</button>
+          <button @click="signUpMode = !signUpMode" class="btn transparent">
+            立即注册
+          </button>
         </div>
-        <img src="@/assets/img/log.svg" alt="" class="image">
+        <img src="@/assets/img/log.svg" alt="" class="image" />
       </div>
       <div class="panel right-panel">
         <div class="content">
           <h3></h3>
           <p></p>
-          <button @click="signUpMode = !signUpMode" class="btn transparent">我要登陆</button>
+          <button @click="signUpMode = !signUpMode" class="btn transparent">
+            我要登陆
+          </button>
         </div>
-        <img src="@/assets/img/register.svg" alt="" class="image">
+        <img src="@/assets/img/register.svg" alt="" class="image" />
       </div>
     </div>
   </div>
 </template>
 
 <script lang="ts" setup>
-import { ref,reactive } from 'vue'
-import { loginUser, rules } from '@/utils/loginValidators'
-import { registerUser, registerRules } from '@/utils/registerValidators'
+import { ref, reactive } from "vue";
+import { loginUser, rules } from "@/utils/loginValidators";
+import { registerUser, registerRules } from "@/utils/registerValidators";
 // 导入登陆组件
 // @ts-ignore
-import LoginForm from '@/components/LoginForm.vue'  
+import LoginForm from "@/components/LoginForm.vue";
 // 导入注册组件
 // @ts-ignore
-import RegisterForm from '@/components/RegisterForm.vue'  
+import RegisterForm from "@/components/RegisterForm.vue";
 
-const signUpMode = ref<boolean>(false)
-
+const signUpMode = ref<boolean>(false);
 </script>
 
 <style scoped>
@@ -170,7 +170,7 @@ const signUpMode = ref<boolean>(false)
 
 .left-panel {
   pointer-events: all;
-  padding: 3rem 17% 2rem 12%;
+  padding: 3rem 17% 2rem 14%;
 }
 
 .right-panel {
@@ -247,6 +247,14 @@ const signUpMode = ref<boolean>(false)
 
 .container.sign-up-mode .right-panel {
   pointer-events: all;
+}
+
+@media (max-width: 1500px) {
+  .panel .content {
+    padding-right: 25%;
+    transition: transform 0.9s ease-in-out;
+    transition-delay: 0.8s;
+  }
 }
 
 @media (max-width: 870px) {
